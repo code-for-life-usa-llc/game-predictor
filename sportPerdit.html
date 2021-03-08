@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GSP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <style>
+        .hide{
+            display: none;
+        }
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+            }
+            /* Clearfix (clear floats) */
+            .row::after {
+            content: "";
+            clear: both;
+            display: table;
+            }
+    </style>
+</head>
+<body>
+    <!-- <div class="row">
+        <div class="column">
+            <img id="basketBall" src="img/image.png" style="width:100%"/>
+        </div>
+        <div class="column">
+            <img id="baseBall" src="img/mbl.png" style="width:100%"/>
+        </div>
+    </div> -->
+            <div align='center'>
+            <img id="basketBall" src="NBA-logo.jpg" width="15%" height="50%">
+            <img id="baseBall" src="mbl.png" width="15%" height="50%">
+            
+        
+    <!-- Choose team buttons -->
+    <div id="basketballOptions" class="hide">
+        <div class="btn-group" align="center">
+            <button class="btn btn-warning btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Away Team
+            </button>
+            <div id="awayTeam" class="dropdown-menu">
+                <option value="Atlanta Hawks">Atlanta Hawks</option>
+                <option value="Boston Celtics">Boston Celtics</option>
+                <option value="Brooklyn Nets">Brooklyn Nets</option>
+                <option value="Charlotte Hornets">Charlotte Hornets</option>
+                <option value="Chicago Bulls">Chicago Bulls</option>
+                <option value="Cleveland Cavaliers">Cleveland Cavaliers</option>
+                <option value="Dallas Mavericks">Dallas Mavericks</option>
+                <option value="Denver Nuggets">Denver Nuggets</option>
+                <option value="Detroit Pistons">Detroit Pistons</option>
+                <option value="Golden State Warriors">Golden State Warriors</option>
+                <option value="Huston Rockets">Huston Rockets</option>
+                <option value="Indians Pacers">Indians Pacers</option>
+                <option value="Los Angeles Clippers">Los Angeles Clippers</option>
+                <option value="Los Angeles Lakers">Los Angeles Lakers</option>
+                <option value="Memphis Grizzlies">Memphis Grizzlies</option>
+                <option value="Miami Heat">Miami Heat</option>
+                <option value="Milwakee Bucks">Milwakee Bucks</option>
+                <option value="Minnesota Timberwolves">Minnesota Timberwolves</option>
+                <option value="New Orleans Pelicans">New Orleans Pelicans</option>
+                <option value="New York Knicks">New York Knicks</option>
+                <option value="Oklahoma City Thunder">Oklahoma City Thunder</option>
+                <option value="Orlando Majic">Orlando Majic</option>
+                <option value="Philadelphia 76ers">Philadelphia 76ers</option>
+                <option value="Phoenix Suns">Phoenix Suns</option>
+                <option value="Portland Trailblazers">Portland Trailblazers</option>
+                <option value="Sacramento Kings">Sacramento Kings</option>
+                <option value="San Antonio Spurs">San Antonio Spurs</option>
+                <option value="Toronto Raptors">Toronto Raptors</option>
+                <option value="Utah Jazz">Utah Jazz</option>
+                <option value="Washington Wizards">Washington Wizards</option>
+            </div>
+        </div>
+        <div class="btn-group" align="center">
+            <button class="btn btn-success btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Home Team
+            </button>
+            <div id="homeTeam" class="dropdown-menu" data-spy="scroll" data-offset="50">
+                <option value="Atlanta Hawks">Atlanta Hawks</option>
+                <option value="Boston Celtics">Boston Celtics</option>
+                <option value="Brooklyn Nets">Brooklyn Nets</option>
+                <option value="Charlotte Hornets">Charlotte Hornets</option>
+                <option value="Chicago Bulls">Chicago Bulls</option>
+                <option value="Cleveland Cavaliers">Cleveland Cavaliers</option>
+                <option value="Dallas Mavericks">Dallas Mavericks</option>
+                <option value="Denver Nuggets">Denver Nuggets</option>
+                <option value="Detroit Pistons">Detroit Pistons</option>
+                <option value="Golden State Warriors">Golden State Warriors</option>
+                <option value="Huston Rockets">Huston Rockets</option>
+                <option value="Indians Pacers">Indians Pacers</option>
+                <option value="Los Angeles Clippers">Los Angeles Clippers</option>
+                <option value="Los Angeles Lakers">Los Angeles Lakers</option>
+                <option value="Memphis Grizzlies">Memphis Grizzlies</option>
+                <option value="Miami Heat">Miami Heat</option>
+                <option value="Milwakee Bucks">Milwakee Bucks</option>
+                <option value="Minnesota Timberwolves">Minnesota Timberwolves</option>
+                <option value="New Orleans Pelicans">New Orleans Pelicans</option>
+                <option value="New York Knicks">New York Knicks</option>
+                <option value="Oklahoma City Thunder">Oklahoma City Thunder</option>
+                <option value="Orlando Majic">Orlando Majic</option>
+                <option value="Philadelphia 76ers">Philadelphia 76ers</option>
+                <option value="Phoenix Suns">Phoenix Suns</option>
+                <option value="Portland Trailblazers">Portland Trailblazers</option>
+                <option value="Sacramento Kings">Sacramento Kings</option>
+                <option value="San Antonio Spurs">San Antonio Spurs</option>
+                <option value="Toronto Raptors">Toronto Raptors</option>
+                <option value="Utah Jazz">Utah Jazz</option>
+                <option value="Washington Wizards">Washington Wizards</option>
+            </div>
+        </div>
+            <br><br>
+        </div>
+    <div id="baseballOptions" class="hide">
+        <div class="btn-group">
+            <button class="btn btn-warning btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Away Team
+            </button>
+            <div id="awayTeam" class="dropdown-menu">
+                 <option>...</option>
+            </div>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-success btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Home Team
+            </button>
+            <div id="homeTeam" class="dropdown-menu" data-spy="scroll" data-offset="50">
+                <option>...</option>
+            </div>
+        </div>
+            <br><br>
+        </div>
+</div>
+    <script>
+
+        
+
+        class BasketBall {
+            constructor(name, pct) {
+                this.name = name;
+                this.pct = pct;
+            }
+        }
+        //Eastern Conference
+        let New_York_Knicks = new BasketBall("New York Knicks", .207);
+        let Cleveland_Caveliers = new BasketBall("Cleveland Caveliers", .232);
+        let Chicago_Bulls = new BasketBall("Chicago Bulls", .268);
+        let Atlanta_Hawks = new BasketBall("Atlanta Hawks", .354);
+        let Washington_Wizards = new BasketBall("Washington Wizards", .390);
+        let Charlotte_Hornets = new BasketBall("Charlotte Hornets", .476);
+        let Miami_Heat = new BasketBall("Miami Heat", .476);
+        let Detroit_Pistons = new BasketBall("Detroit Pistons", .500);
+        let Orlando_Magic = new BasketBall("Orlando Magic", .512);
+        let Brooklyn_Nets = new BasketBall("Brooklyn Nets", .512);
+        let Indiana_pacers = new BasketBall("Indiana pacers", .585);
+        let Boston_Celtics = new BasketBall("Boston Celtics", .598);
+        let Philadelphia_76ers = new BasketBall("Philadelphia 76ers", .622);
+        let Toronto_Raptors = new BasketBall("Toronto Raptors", .707);
+        let Milwaukee_Bucks = new BasketBall("Milwaukee Bucks", .732);
+        //Western Conference
+        let Phoenix_suns = new BasketBall("Phoenix Suns", .232);
+        let Memphis_grizzlies = new BasketBall("Memphis Grizzlies", .402);
+        let New_Orleans_pelicans = new BasketBall("New Orleans Pelicans", .402);
+        let Dallas_Mavericks = new BasketBall("Dallas Mavericks", .402);
+        let Minnesota_timberwolves = new BasketBall("Minnesota Timberwolves", .439);
+        let Los_Angeles_lakers = new BasketBall("Los Angeles Lakers", .451);
+        let Sacramento_kings = new BasketBall("Sacramento Kings", .476);
+        let San_Antonio_Spurs = new BasketBall("San Antonio Spurs", .585);
+        let LA_Clippers = new BasketBall("LA Clippers", .585);
+        let Oklahoma_City_Thunder = new BasketBall("Oklahoma City Thunder", .598);
+        let Utah_Jazz = new BasketBall("Utah Jazz", .610);
+        let Houston_Rockets = new BasketBall("Houston Rockets", .646);
+        let Portland_Trail_Blazers = new BasketBall("Portland Trail Blazers", .646);
+        let Denver_Nuggets = new BasketBall("Denver Nuggets", .659);
+        let Golden_State_Warriors = new BasketBall("Golden State Warriors", .695);
+
+        //MLB
+        class Baseball {
+            constructor(name, pct) {
+                this.name = name;
+                this.pct = pct;
+            }
+        }
+        //American Leauge
+        //AL East
+        let New_York_Yankees = new Baseball("New York Yankees", .636);
+        let Tampa_Bay_Rays= new Baseball("Tampa Bay Rays", .593);
+        let Boston_Red_Sox = new Baseball("Boston Red Sox", .519);
+        let Toronto_Blue_Jays = new Baseball("Toronto Blue Jays", .414);
+        let Baltimore_Orioles = new Baseball("Baltimore Orioles", .333);
+        //AL Central
+        let  Minnesota_Twins= new Baseball("Minnesota Twins", .623);
+        let  Cleveland_Indians= new Baseball("Cleveland Indians", .574);
+        let  Chicago_White_Sox= new Baseball("Chicago white Sox", .447);
+        let  Kansas_City_Royals= new Baseball("Kansas City Royals", .364);
+        let  Detroit_Tigers= new Baseball("DET", .292);
+        //AL West
+        let  Houston_Astros= new Baseball("Houston Astros", .660);
+        let  Oakland_Athletics= new Baseball("Oakland Athletics", .574);
+        let  Texas_Rangers= new Baseball("Texas Rangers", .481);
+        let  Los_Angeles_Angles= new Baseball("Los Angeles Angles", .444);
+        let  Seattle_Mariners= new Baseball("Seattle Mariners", .420);
+        
+        // National Leauge
+        //NL East
+        let  Atlanta_Braves= new Baseball("Atlanta Braves", .599);
+        let  Washington_Nationals= new Baseball("Washington Nationals", .574);
+        let  New_York_Mets= new Baseball("New York Mets", .531);
+        let  Philadelphia_Phillies= new Baseball("Philadelphia Phillies", .500);
+        let  Miami_Marlins= new Baseball("Miami Marlins", .352);
+        //NL Central
+        let  St_Louis_Cardnals= new Baseball("St Louis", .562);
+        let  Milwaukee_Brewers= new Baseball("Milwaukee Brewers", .562);
+        let  Chicago_Cubs= new Baseball("Chicago Cubs", .549);
+        let  Cincinnati_Reds= new Baseball("Cincinnati Reds", .519);
+        let  Pittsburgh_Pirates= new Baseball("Pittsburgh Pirates", .636);
+
+        //NL West
+        let  Los_Angeles_Dodgers= new Baseball("Los Angeles Dodgers", .645);
+        let  Arizona_Diamondbacks= new Baseball("Arizona Diamondbacks", .525);
+        let  San_Fancisco_Giants= new Baseball("San Fancisco Giants", .475);
+        let  Colorado_Rockies= new Baseball("Colorado Rockies", .438);
+        let  San_Diago_Padres= new Baseball("San Diago Padres", .432);
+    </script>
+</body>
+</html>
