@@ -33,8 +33,8 @@
         </div>
     </div> -->
             <div align='center'>
-            <img id="basketBall" src="NBA-logo.jpg" width="15%" height="50%">
-            <img id="baseBall" src="mbl.png" width="15%" height="50%">
+            <img id="basketBall" src="img/NBA-logo.jpg" width="15%" height="50%">
+            <img id="baseBall" src="img/mbl.png" width="15%" height="50%">
             
         
     <!-- Choose team buttons -->
@@ -136,95 +136,45 @@
         </div>
 </div>
     <script>
-
+​
         
-
-        class BasketBall {
-            constructor(name, pct) {
-                this.name = name;
-                this.pct = pct;
-            }
-        }
-        //Eastern Conference
-        let New_York_Knicks = new BasketBall("New York Knicks", .207);
-        let Cleveland_Caveliers = new BasketBall("Cleveland Caveliers", .232);
-        let Chicago_Bulls = new BasketBall("Chicago Bulls", .268);
-        let Atlanta_Hawks = new BasketBall("Atlanta Hawks", .354);
-        let Washington_Wizards = new BasketBall("Washington Wizards", .390);
-        let Charlotte_Hornets = new BasketBall("Charlotte Hornets", .476);
-        let Miami_Heat = new BasketBall("Miami Heat", .476);
+​
+  
+​
+       // const teamNames = [
+            //eastern conference
+  /*          {"teams" : "New York Knicks", "pct": .207}
+            {"teams" : "Cleveland Caveliers", "pct": .232}
+            {"teams" : "Chicago Bulls", "pct": .268}
+            {"teams" : "Atlanta Hawks", "pct": .354}
+            {"teams" : "Washington Wizards", "pct": .390}
+            {"teams" : "Charlotte Hornets", "pct": .476}
+            {"teams" : "Miami Heat", "pct": .476}
+            {"teams" : "Detroit Pistons", "pct": .500}
+            {"teams" : "Orlando Magic", "pct": .512}
+            {"teams" : "Brooklyn Nets", "pct": .512}
+            {"teams" : "Indiana pacers", "pct": .585}
+            {"teams" : "Boston Celtics", "pct": .598}
+            {"teams" : "Philadelphia 76ers", "pct": .622}
+            {"teams" : "Toronto Raptors", "pct": .707}
+/*            {"teams" : "Milwaukee Bucks", "pct": .732}
+​
+        //Western conference
+            // {"teams" : ""}
+            // {"teams" : ""}
+            // {"teams" : ""}
+            // {"teams" : ""}
+            // {"teams" : ""}
+            // {"teams" : ""}
+            // {"teams" : ""}
+            // {"teams" : ""}
+        ];
         let Detroit_Pistons = new BasketBall("Detroit Pistons", .500);
         let Orlando_Magic = new BasketBall("Orlando Magic", .512);
         let Brooklyn_Nets = new BasketBall("Brooklyn Nets", .512);
         let Indiana_pacers = new BasketBall("Indiana pacers", .585);
         let Boston_Celtics = new BasketBall("Boston Celtics", .598);
-        let Philadelphia_76ers = new BasketBall("Philadelphia 76ers", .622);
-        let Toronto_Raptors = new BasketBall("Toronto Raptors", .707);
-        let Milwaukee_Bucks = new BasketBall("Milwaukee Bucks", .732);
-        //Western Conference
-        let Phoenix_suns = new BasketBall("Phoenix Suns", .232);
-        let Memphis_grizzlies = new BasketBall("Memphis Grizzlies", .402);
-        let New_Orleans_pelicans = new BasketBall("New Orleans Pelicans", .402);
-        let Dallas_Mavericks = new BasketBall("Dallas Mavericks", .402);
-        let Minnesota_timberwolves = new BasketBall("Minnesota Timberwolves", .439);
-        let Los_Angeles_lakers = new BasketBall("Los Angeles Lakers", .451);
-        let Sacramento_kings = new BasketBall("Sacramento Kings", .476);
-        let San_Antonio_Spurs = new BasketBall("San Antonio Spurs", .585);
-        let LA_Clippers = new BasketBall("LA Clippers", .585);
-        let Oklahoma_City_Thunder = new BasketBall("Oklahoma City Thunder", .598);
-        let Utah_Jazz = new BasketBall("Utah Jazz", .610);
-        let Houston_Rockets = new BasketBall("Houston Rockets", .646);
-        let Portland_Trail_Blazers = new BasketBall("Portland Trail Blazers", .646);
-        let Denver_Nuggets = new BasketBall("Denver Nuggets", .659);
-        let Golden_State_Warriors = new BasketBall("Golden State Warriors", .695);
-
-        //MLB
-        class Baseball {
-            constructor(name, pct) {
-                this.name = name;
-                this.pct = pct;
-            }
-        }
-        //American Leauge
-        //AL East
-        let New_York_Yankees = new Baseball("New York Yankees", .636);
-        let Tampa_Bay_Rays= new Baseball("Tampa Bay Rays", .593);
-        let Boston_Red_Sox = new Baseball("Boston Red Sox", .519);
-        let Toronto_Blue_Jays = new Baseball("Toronto Blue Jays", .414);
-        let Baltimore_Orioles = new Baseball("Baltimore Orioles", .333);
-        //AL Central
-        let  Minnesota_Twins= new Baseball("Minnesota Twins", .623);
-        let  Cleveland_Indians= new Baseball("Cleveland Indians", .574);
-        let  Chicago_White_Sox= new Baseball("Chicago white Sox", .447);
-        let  Kansas_City_Royals= new Baseball("Kansas City Royals", .364);
-        let  Detroit_Tigers= new Baseball("DET", .292);
-        //AL West
-        let  Houston_Astros= new Baseball("Houston Astros", .660);
-        let  Oakland_Athletics= new Baseball("Oakland Athletics", .574);
-        let  Texas_Rangers= new Baseball("Texas Rangers", .481);
-        let  Los_Angeles_Angles= new Baseball("Los Angeles Angles", .444);
-        let  Seattle_Mariners= new Baseball("Seattle Mariners", .420);
-        
-        // National Leauge
-        //NL East
-        let  Atlanta_Braves= new Baseball("Atlanta Braves", .599);
-        let  Washington_Nationals= new Baseball("Washington Nationals", .574);
-        let  New_York_Mets= new Baseball("New York Mets", .531);
-        let  Philadelphia_Phillies= new Baseball("Philadelphia Phillies", .500);
-        let  Miami_Marlins= new Baseball("Miami Marlins", .352);
-        //NL Central
-        let  St_Louis_Cardnals= new Baseball("St Louis", .562);
-        let  Milwaukee_Brewers= new Baseball("Milwaukee Brewers", .562);
-        let  Chicago_Cubs= new Baseball("Chicago Cubs", .549);
-        let  Cincinnati_Reds= new Baseball("Cincinnati Reds", .519);
-        let  Pittsburgh_Pirates= new Baseball("Pittsburgh Pirates", .636);
-
-        //NL West
-        let  Los_Angeles_Dodgers= new Baseball("Los Angeles Dodgers", .645);
-        let  Arizona_Diamondbacks= new Baseball("Arizona Diamondbacks", .525);
-        let  San_Fancisco_Giants= new Baseball("San Fancisco Giants", .475);
-        let  Colorado_Rockies= new Baseball("Colorado Rockies", .438);
-        let  San_Diago_Padres= new Baseball("San Diago Padres", .432);
+        let Philadelphia_76ers = new BasketBall("Ph...") */
     </script>
 </body>
 </html>
