@@ -1,0 +1,338 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<option>Los Angeles Lakers<option></option>
+<option>Brooklyn Nets</option>
+<option>Golden State Warriors<option></option>
+
+
+
+<div align="center">
+    <h1>Game Simulator</h1><br>
+    <div class="btn-group" align="center">
+        <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sport
+        </button>
+        <div id="sports" class="dropdown-menu">
+            <option value="1">Basketball</option>
+            <option value="2">Futbol</option>
+        </div>
+    </div>
+    <br><br>
+    <div id="futbolOptions">
+<div class="btn-group" align="center" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <button class="btn btn-danger btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Away Team
+    </button>
+    <div id="futbolAwayTeam" class="dropdown-menu">
+        ...
+    </div>
+</div>
+<div class="btn-group" align="center">
+    <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Home Team
+    </button>
+    <div id="futbolHomeTeam" class="dropdown-menu">
+        ...
+    </div>
+</div>
+    <br><br>
+</div>
+    <div id="basketballOptions">
+<div class="btn-group" align="center">
+    <button class="btn btn-warning btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Away Team
+    </button>
+    <div id="awayTeam" class="dropdown-menu">
+         <option>Atlanta Hawks</option>options>
+        <option>Boston Celtics</option>
+
+    </div>
+</div>
+<div class="btn-group" align="center">
+    <button class="btn btn-success btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Home Team
+    </button>
+    <div id="homeTeam" class="dropdown-menu" data-spy="scroll" data-offset="50">
+        <option>Atlanta Hawks</option>options>
+        <option>Boston Celtics</option>
+
+    </div>
+</div>
+    <br><br>
+</div>
+</div>
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>GSP</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </head>
+    <style>
+body{
+    background-image: none;
+}
+
+    </style>
+    <body>
+
+<h1>GSP</h1>
+
+
+<script src= sportPerdit.js></script>
+    </body>
+</html>
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+<div  class="row">
+    <div class="column">
+        <img align="left" id="basketBall" src="NBA.png" width="100%"/>
+    </div>
+    <div align="right" class="column">
+        <img  id="baseBall" src="MLB.png" width="100%"/>
+    </div>
+</div>
+
+<div class="btn-group" align="center">
+    <button class="btn btn-success btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Home Team
+    </button>
+    <div id="homeTeam" class="dropdown-menu" data-spy="scroll" data-offset="50">
+        <option>...</option>
+    </div>
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+</div><div class="btn-group" align="center">
+    <button class="btn btn-success btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Home Team
+    </button>
+    <div id="homeTeam" class="dropdown-menu" data-spy="scroll" data-offset="50">
+        <option>...</option>
+    </div>
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
+</div><div class="btn-group" align="center">
+    <button class="btn btn-success btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Home Team
+    </button>
+    <div id="homeTeam" class="dropdown-menu" data-spy="scroll" data-offset="50">
+        <option>...</option>
+    </div>
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+</div><div class="btn-group" align="center">
+    <button class="btn btn-success btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        AwayTeam
+    </button>
+    <div id="awayTeam" class="dropdown-menu" data-spy="scroll" data-offset="50">
+        <option>...</option>
+    </div>
+</div>
+
+<script>
+    let x = document.getElementById('basketBall');
+    let y = document.getElementById('baseBall');
+    x.addEventListener('click', function(){
+        console.log('working');
+    })
+</script>
+
+function test(){
+    console.log(button);
+}
+
+
+Arizona Diamondbacks
+
+Atlanta Braves
+
+Baltimore Orioles 
+
+Boston Red Sox
+
+Chicago White Sox
+
+Chicago Cubs
+
+Cincinnati Reds
+
+Cleveland Indians
+
+Colorado Rockies
+
+Detroit Tigers
+
+Houston Astros
+
+Kansas City Royals
+
+Los Angeles Angels
+
+Los Angeles Dodgers
+
+Miami Marlins
+
+Milwaukee Brewers
+
+Minnesota Twins
+
+New York Yankees
+
+New York Mets
+
+Oakland Athletics
+
+Philadelphia Phillies
+
+Pittsburgh Pirates
+
+San Diego Padres
+
+San Francisco Giants
+
+Seattle Mariners
+
+St. Louis Cardinals
+
+Tampa Bay Rays
+
+Texas Rangers
+
+Toronto Blue Jays
+
+Washington Nationals
+//////////////////////////////////////////////////////////////////////
+
+
+const userAction = async () => {
+    const response = await fetch('https://www.balldontlie.io/api/v1/teams');
+    let baskballTeams = await response.json();
+    baskballTeams = baskballTeams.data
+    console.log(baskballTeams[0]);
+    const hometeamlist = document.getElementById('homeNBATeams');
+    const awayteamlist = document.getElementById('awayNBATeams')
+
+    //hello how was your day
+    // console.log(baskballTeams); return;
+for(let ballTeam of baskballTeams){
+    //console.log(ballTeam.abbreviation);
+    
+    hometeamlist
+
+    awayteamlist
+    
+    var option = document.createElement("option");
+    option.text = ballTeam.full_name;
+    option.value = ballTeam.id;
+    hometeamlist.appendChild(option);
+
+    var option = document.createElement("option");
+    option.text = ballTeam.full_name;
+    option.value = ballTeam.id;
+    awayteamlist.appendChild(option);
+    
+}
+
+
+
+}
+userAction();
+
+
+
+
+
+
+const button = document.getElementById('Basketball');
+button.addEventListener('click', userAction);
+
+<option value="Atlanta Hawks">Atlanta Hawks</option>
+<option value="Boston Celtics">Boston Celtics</option>
+<option value="Brooklyn Nets">Brooklyn Nets</option>
+<option value="Charlotte Hornets">Charlotte Hornets</option>
+<option value="Chicago Bulls">Chicago Bulls</option>
+<option value="Cleveland Cavaliers">Cleveland Cavaliers</option>
+<option value="Dallas Mavericks">Dallas Mavericks</option>
+<option value="Denver Nuggets">Denver Nuggets</option>
+<option value="Detroit Pistons">Detroit Pistons</option>
+<option value="Golden State Warriors">Golden State Warriors</option>
+<option value="Huston Rockets">Huston Rockets</option>
+<option value="Indians Pacers">Indians Pacers</option>
+<option value="Los Angeles Clippers">Los Angeles Clippers</option>
+<option value="Los Angeles Lakers">Los Angeles Lakers</option>
+<option value="Memphis Grizzlies">Memphis Grizzlies</option>
+<option value="Miami Heat">Miami Heat</option>
+<option value="Milwakee Bucks">Milwakee Bucks</option>
+<option value="Minnesota Timberwolves">Minnesota Timberwolves</option>
+<option value="New Orleans Pelicans">New Orleans Pelicans</option>
+<option value="New York Knicks">New York Knicks</option>
+<option value="Oklahoma City Thunder">Oklahoma City Thunder</option>
+<option value="Orlando Majic">Orlando Majic</option>
+<option value="Philadelphia 76ers">Philadelphia 76ers</option>
+<option value="Phoenix Suns">Phoenix Suns</option>
+<option value="Portland Trailblazers">Portland Trailblazers</option>
+<option value="Sacramento Kings">Sacramento Kings</option>
+<option value="San Antonio Spurs">San Antonio Spurs</option>
+<option value="Toronto Raptors">Toronto Raptors</option>
+<option value="Utah Jazz">Utah Jazz</option>
+<option value="Washington Wizards">Washington Wizards</option>
+
+
+    <!-- <div class="row">
+        <div class="column">
+            <img id="basketBall" src="img/image.png" style="width:100%"/>
+        </div>
+        <div class="column">
+            <img id="baseBall" src="img/mbl.png" style="width:100%"/>
+        </div>
+    </div> -->
+    <div align='center'>
+        <img id="basketBall" src="img/NBA-logo.jpg" width="15%" height="50%">
+        <img id="baseBall" src="img/MLB.png" width="15%" height="50%">
+        </div>
+    
+<!-- Choose team buttons -->
+<div id="basketballOptions" class="hide">
+    <div class="btn-group" align="center">
+        <button class="btn btn-warning btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Away Team
+        </button>
+        <div id="awayTeam" class="dropdown-menu">
+
+        </div>
+    </div>
+    <div class="btn-group" align="center">
+        <button class="btn btn-success btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Home Team
+        </button>
+        <div id="homeTeam" class="dropdown-menu" data-spy="scroll" data-offset="50">
+
+        </div>
+    </div>
+        <br><br>
+    </div>
+<div id="baseballOptions" class="hide">
+    <div class="btn-group">
+        <button class="btn btn-warning btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Away Team
+        </button>
+        <div id="awayTeam" class="dropdown-menu">
+             <option>...</option>
+        </div>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-success btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Home Team
+        </button>
+        <div id="homeTeam" class="dropdown-menu" data-spy="scroll" data-offset="50">
+            <option>...</option>
+        </div>
+    </div>
+        <br><br>
+</div>
