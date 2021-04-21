@@ -1,23 +1,21 @@
 let basketballPic = document.getElementById('basketball');
 let baseballPic = document.getElementById('baseball');
-
 let nbaDropdown = document.getElementById('basketballOptions');
 let mlbDropdown = document.getElementById('baseballOptions')
-
-basketballPic.addEventListener("click", function(){
-    nbaDropdown.style.display = "block"
-});
- baseballPic.addEventListener("click", function(){
-    mlbDropdown.style.display = "block"
-});
-
-if(mlbDropdown = baseballPic){
-    return baseballPic;
-}else{
-    return basketballPic;
-}
-
-/* const nbaTeamNames = [
+basketballPic.addEventListener("click", show);
+ baseballPic.addEventListener("click", show);
+ function show(){
+    if(this.id === 'basketball'){
+        nbaDropdown.style.display = 'block';
+        mlbDropdown.style.display = 'none';
+    }else if(this.id === 'baseball'){
+        nbaDropdown.style.display = 'none';
+        mlbDropdown.style.display = 'block';
+    }else{
+        console.log('Error');
+    }
+ }
+ const nbaTeamNames = [
             //eastern conference
             {"teams" : "New York Knicks", "pct": .207},
             {"teams" : "Cleveland Caveliers", "pct": .232},
@@ -34,28 +32,24 @@ if(mlbDropdown = baseballPic){
             {"teams" : "Philadelphia 76ers", "pct": .622},
             {"teams" : "Toronto Raptors", "pct": .707},
             {"teams" : "Milwaukee Bucks", "pct": .732},
-​
         //Western conferenc
-        
             {"teams" : "Phoenix Suns", "pct" : .232},
-            {"teams" : "Memphis_grizzlies", "pct" : .402},
-            {"teams" : "New_Orleans_pelicans", "pct" : .402},
-            {"teams" : "Dallas_Mavericks", "pct" : .402},
-            {"teams" : "Minnesota_timberwolves", "pct" : .439},
-            {"teams" : "Los_Angeles_lakers", "pct" : .451},
-            {"teams" : "Sacramento_kings", "pct" : .476},
-            {"teams" : "San_Antonio_Spurs", "pct" : .585},
-            {"teams" : "LA_Clippers", "pct" : .585},
-            {"teams" : "Oklahoma_City_Thunder", "pct" : .598},
-            {"teams" : "Utah_Jazz", "pct" : .610},
-            {"teams" : "Houston_Rockets", "pct" : .646},
-            {"teams" : "Portland_Trail_Blazers", "pct" : .646},
-            {"teams" : "Denver_Nuggets", "pct" : .659},
-            {"teams" : "Golden_State_Warriors", "pct" : .695},
+            {"teams" : "Memphis grizzlies", "pct" : .402},
+            {"teams" : "New Orleans pelicans", "pct" : .402},
+            {"teams" : "Dallas Mavericks", "pct" : .402},
+            {"teams" : "Minnesota timberwolves", "pct" : .439},
+            {"teams" : "Los Angeles lakers", "pct" : .451},
+            {"teams" : "Sacramento kings", "pct" : .476},
+            {"teams" : "San Antonio Spurs", "pct" : .585},
+            {"teams" : "Los Angeles Clippers", "pct" : .585},
+            {"teams" : "Oklahoma City Thunder", "pct" : .598},
+            {"teams" : "Utah Jazz", "pct" : .610},
+            {"teams" : "Houston Rockets", "pct" : .646},
+            {"teams" : "Portland Trail Blazers", "pct" : .646},
+            {"teams" : "Denver Nuggets", "pct" : .659},
+            {"teams" : "Golden State Warriors", "pct" : .695},
     ];
-*/
     const mlbTeamNames = [
-
         // AL
             {"team": "New_York_Yankees", "pct": .636},
             {"team": "Tampa_Bay_Rays", "pct": .593},
@@ -72,9 +66,7 @@ if(mlbDropdown = baseballPic){
             {"team": "Texas_Rangers", "pct": .481},
             {"team": "Los_Angeles_Angles", "pct": .444},
             {"team": "Seattle_Mariners", "pct": .420},
-            
             // NL
-            
             {"team": "Atlanta_Braves", "pct": .599},
             {"team": "Washington_Nationals", "pct": .574},
             {"team": "New_York_Mets", "pct": .531},
@@ -90,30 +82,57 @@ if(mlbDropdown = baseballPic){
             {"team": "San_Fancisco_Giants", "pct": .475},
             {"team": "Colorado_Rockies", "pct": .428},
             {"team": "San_Diago_Padres", "pct": .432},
-      
     ];
-
 let awayTeam = document.getElementById("awayTeam");
 let homeTeam = document.getElementById("homeTeam");
+// let 
+let firstSelected = document.getElementById('firstSelected');
+let secondSelected = document.getElementById('secondSelected');
 
-   awayTeam.addEventListener('change', function(e){
-       console.log(this);
-   })
+    for (i = 0; i<30; i++){
+        var next = document.createElement('option');
+        next.setAttribute("class", "nbaAway");
+        next.setAttribute("value", i);
+        var textnode = document.createTextNode(nbaTeamNames[i].teams);
+        next.appendChild(textnode);
+        document.getElementById("awayTeam").appendChild(next);
+    }
 
 
+    for (i = 0; i<30; i++){
+        var next = document.createElement('option');
+        next.setAttribute("class", "nbaHome");
+        next.setAttribute("value", i);
+        var textnode = document.createTextNode(nbaTeamNames[i].teams);
+        next.appendChild(textnode);
+        document.getElementById("homeTeam").appendChild(next);
+    }
 
+    let selector = document.getElementsByClassName('nbaAway');
 
-/*    if(mlbDropdown = "click"){
-    return nbaDropdown;
-}else{
-    return
-}
+    for (var i = 0; i < selector.length; i++) {
+        selector[i].addEventListener('click', selectedTeam1);
+    }
 
-*/
+    let selector2 = document.getElementsByClassName('nbaHome');
 
-  /*  for (var i = 0; i<31; i++){
-        var opt = document.createElement('option');
-        opt.value = i;
-        opt.innerHTML = i;
-        select.appendChild(opt);
-    } */
+    for (var i = 0; i < selector2.length; i++) {
+        selector2[i].addEventListener('click', selectedTeam2);
+    }
+
+    function selectedTeam1(){
+        let teamSelected = this.getAttribute("value");
+        firstSelected.innerHTML = `${nbaTeamNames[teamSelected].teams} VS `;
+        console.log(nbaTeamNames[teamSelected].pct)
+    }
+
+    function selectedTeam2(){
+        let teamSelected = this.getAttribute("value");
+        firstSelected.innerHTML += `${nbaTeamNames[teamSelected].teams} `;
+        console.log(nbaTeamNames[teamSelected].pct);
+    }
+
+/* function winner(){
+let winner = this.getAttribute("value");
+console.log(nbaTeamNames[winner].pct)
+} */
