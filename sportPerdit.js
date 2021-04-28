@@ -89,6 +89,11 @@ let homeTeam = document.getElementById("homeTeam");
 let firstSelected = document.getElementById('firstSelected');
 let secondSelected = document.getElementById('secondSelected');
 
+let predictButton = document.getElementById("predictButton");
+
+let winner = document.getElementById('winner');
+
+
     for (i = 0; i<30; i++){
         var next = document.createElement('option');
         next.setAttribute("class", "nbaAway");
@@ -122,17 +127,26 @@ let secondSelected = document.getElementById('secondSelected');
 
     function selectedTeam1(){
         let teamSelected = this.getAttribute("value");
-        firstSelected.innerHTML = `${nbaTeamNames[teamSelected].teams} VS `;
+        firstSelected.innerHTML = nbaTeamNames[teamSelected].teams;
+        firstSelected.setAttribute("value", nbaTeamNames[teamSelected].pct);
         console.log(nbaTeamNames[teamSelected].pct)
     }
 
     function selectedTeam2(){
         let teamSelected = this.getAttribute("value");
-        firstSelected.innerHTML += `${nbaTeamNames[teamSelected].teams} `;
+        secondSelected.innerHTML = nbaTeamNames[teamSelected].teams;
+        secondSelected.setAttribute("value", nbaTeamNames[teamSelected].pct);
         console.log(nbaTeamNames[teamSelected].pct);
     }
 
-/* function winner(){
-let winner = this.getAttribute("value");
-console.log(nbaTeamNames[winner].pct)
-} */
+    predictButton.addEventListener('click', function(){
+        if(firstSelected.getAttribute('value') > secondSelected.getAttribute('value')){
+            winner.innerHTML = `${firstSelected.textContent} is the winner`;
+        }else if(secondSelected.getAttribute('value') > firstSelected.getAttribute('value')){
+            winner.innerHTML = `${secondSelected.textContent} is the winner`;
+        }else if(secondSelected.getAttribute('value') === firstSelected.getAttribute('value')){
+            winner.innerHTML = 'tie';
+        }else{
+            console.log('error');
+        }
+    });
