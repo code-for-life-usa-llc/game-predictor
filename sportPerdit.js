@@ -147,6 +147,6 @@ let winner = document.getElementById('winner');
         }else if(secondSelected.getAttribute('value') === firstSelected.getAttribute('value')){
             winner.innerHTML = 'tie';
         }else{
-            console.log('error');
+            console.log('error');   
         }
     });
