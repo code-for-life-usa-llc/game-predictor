@@ -3,6 +3,7 @@
 <head>
     <title>GSP</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="sportPredict.css">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -21,9 +22,18 @@
             clear: both;
             display: table;
             }
+
+            .grayscale{
+                filter: grayscale(100%);
+            }
+
+            .chosen{
+                border-style: solid;
+                border-color: green;
+            }
     </style>
 </head>
-<body>
+<body align='center'>
     <!-- <div class="row">
         <div class="column">
             <img id="basketBall" src="img/image.png" style="width:100%"/>
@@ -32,25 +42,26 @@
             <img id="baseBall" src="img/mbl.png" style="width:100%"/>
         </div>
     </div> -->
-            <div align='center'>
+            <div align="center">
                 <img id="basketball" src="Img/NBA-logo.jpg" width="15%" height="50%">
                 <img id="baseball" src="Img/MLB.png" width="15%" height="50%">
             </div>
+            
     <!-- Choose team buttons -->
-    <div id="basketballOptions" class="hide">
+    <div id="basketballOptions" class="hide" align='center'>
         <div class="btn-group" align="center">
-            <button class="btn btn-warning btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button align='center' class="btn btn-warning btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Away Team
             </button>
-            <div id="awayTeam" class="dropdown-menu">
-            </div>
+            <dropdown align='center' id="awayTeam" class="dropdown-menu">
+            </dropdown>
         </div>
         <div class="btn-group" align="center">
             <button class="btn btn-success btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Home Team
             </button>
-            <div id="homeTeam" class="dropdown-menu" data-spy="scroll" data-offset="50">
-            </div>
+            <dropdown id="homeTeam" class="dropdown-menu" data-spy="scroll" data-offset="50">
+            </dropdown>
         </div>
             <br><br>
 
@@ -64,30 +75,40 @@
 
 
     </div>
-    <div id="baseballOptions" class="hide">
+    <div id="baseballOptions" class="hide" align='center'>
         <div class="btn-group">
             <button class="btn btn-warning btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Away Team
             </button>
-            <div id="awayTeam" class="dropdown-menu">
-                 <option >baseball test</option>
-                 <option >...</option>
-            </div>
+            <dropdown id="awayTeam2" class="dropdown-menu">
+                 
+            </dropdown>
         </div>
         <div class="btn-group">
             <button class="btn btn-success btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Home Team
             </button>
-            <div id="homeTeam" class="dropdown-menu" data-spy="scroll" data-offset="50">
-                <option>...</option>
-            </div>
+            <dropdown id="homeTeam2" class="dropdown-menu" data-spy="scroll" data-offset="50">
+                
+            </dropdown>
         </div>
             <br><br>
+
+            <div class="select2">
+                <p>
+                    <span id="firstSelected2"></span>
+                    VS
+                    <span id="secondSelected2"></span>
+                </p>
+                </div>
     </div>
 
-    <button id="predictButton" class="btn-primary">predict</button>
+    <div align="center" id="box" class="container hide">
+        <button id="predictButton"><span>predict</span></button>
+    </div>
 
     <h1 id="winner"></h1>
+    <h1 id="winner2"></h1>
     <script src= sportPerdit.js>
     </script>
 </body>
